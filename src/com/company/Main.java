@@ -13,10 +13,15 @@ public class Main {
         //Задача 3
         int deliveryDistances = 500;
         int road = delivery(deliveryDistances);
-        //Задача 4
-        reverse();
         //Задача 5
+        reverse();
+        //Задача 4
         kakEtoReshat();
+
+        System.out.println();
+
+        //Здача 5
+        rework();
     }
     //Задача 1. (Метод)
     public static void years(int year) {
@@ -64,14 +69,14 @@ public class Main {
         }
         return deliveryDistances;
     }
-    //Задча 4
+    //Задча 5
     public static void reverse (){
         int [] arr = {3, 2, 1, 6, 5};
         String string = Arrays.toString(arr);
         StringBuilder string2 = new StringBuilder(string);
         System.out.println(string2.reverse());
     }
-    //Задача 5
+    //Задача 4
     public static void kakEtoReshat(){
         String str = "aabccddefgghiijjkk";
         char[] carray = str.toCharArray();
@@ -83,6 +88,14 @@ public class Main {
                 }
             }
         }
-
+    }
+    public static void rework(){
+        String str = "aabccddefgghiijjkk";
+        for (int i=0;i<str.length()-1;i++)
+            if (str.charAt(i) == str.charAt(i+1)) {
+                System.out.println("Dubl founded = "+  str.charAt(i));
+                return;
+            }
+        System.out.println("Dublei net");
     }
 }
